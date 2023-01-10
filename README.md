@@ -194,7 +194,7 @@ I booted into Fedora and added a new entry based on (this guide)[https://github.
 Open `/etc/grub.d/40_custom` and add a new entry:
 
 ```
-menuentry 'Mac OS 12.6.2 (Monterey)` $menuentry_id_option 'macOS-efi' {
+menuentry 'Mac OS 12.6.2 (Monterey)' $menuentry_id_option 'macOS-efi' {
   savedefault
   insmod chain
   insmod part_gpt
@@ -229,7 +229,7 @@ If you see this message upon every reboot after booting into mac...
 
 Set `Kernel > Quirks > DisableRTCChecksum` to `True` in config.plist.
 
-Don't forget to modify Windows' registry to fix clock on dual boot systems. Instructions (here)[https://superuser.com/questions/494432/force-windows-8-to-use-utc-when-dealing-with-bios-clock].
+Don't forget to modify Windows' registry to fix clock on dual boot systems. Instructions [here](https://superuser.com/questions/494432/force-windows-8-to-use-utc-when-dealing-with-bios-clock).
 
 ### Better CPU Frequency Throttling Support
 
