@@ -45,6 +45,7 @@ This repository contains files and instructions for installing Hackintosh on a L
 | Digitizer                   | somewhat; recognizes pen as a mouse with one button.                               |
 | OneLink Pro Docking Station | audio, ethernet, and usb hub work. External monitors do not work!                  |
 | Sleep                       | no changes necessary                                                               |
+| SD Card Reader              |                                                                                    |
 | Integrated camera           |                                                                                    |
 | Integrated microphone       |                                                                                    |
 | Wireless                    |                                                                                    |
@@ -57,7 +58,6 @@ This repository contains files and instructions for installing Hackintosh on a L
 | DRM               | DRM not supported on iGPU only systems (use Chrome instead of Safari)                    |
 | External Monitors | DP/DVI port of OneLink Pro docking station unsupported. HDMI out of side probably works. |
 | Sensors           | Brightness/ambient light, gyroscope not working                                          |
-| SD card reader    | This might work, but I didn't look into it.                                              |
 | Touchscreen       | Doesn't work at all.                                                                     |
 | CFG unlock        | Couldn't unlock BIOS or dump image from update executable.                               |
 
@@ -241,6 +241,10 @@ Add the `StartupMode = 0x00` optional NVRAM variable to hear sound.
 
 Also use "2" for the `AudioOutMask`.
 
+### Add SD Card Reader Support
+
+Using (0xFireWolf/RealtekCardReader)[https://github.com/0xFireWolf/RealtekCardReader]. Seems to work just fine.
+
 ## References and Links
 
 1. [Dortania's OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/)
@@ -251,3 +255,4 @@ Also use "2" for the `AudioOutMask`.
 1. [Fix Windows Time Incorrect on Dualboot Hackintosh](https://superuser.com/questions/494432/force-windows-8-to-use-utc-when-dealing-with-bios-clock) - Modify Windows registry to use UTC.
 1. [Thread about OneLink Pro Docking Station External Monitor](https://www.tonymacx86.com/threads/lenovo-onelink-pro-dock-2-or-3-monitors.254570/) - debugging external monitor off docking station
 1. [Mac Doesn't Support MST](https://www.reddit.com/r/macsysadmin/comments/esk3rz/macos_and_displayport_multistream_transport/) - Multi-stream DisplayPort unsupported (docking station external monitors unsupported)
+1. [SD Card Reader Kext by 0xFireWolf](https://github.com/0xFireWolf/RealtekCardReader) - SD Card Reader kext
