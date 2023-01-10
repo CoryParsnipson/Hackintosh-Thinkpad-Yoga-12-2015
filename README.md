@@ -183,7 +183,7 @@ Mount the EFI partition and copy the USB installer contents into it. The EFI par
 │  │  ├─ OC/
 ```
 
-Copy the usb contents (BOOT and OC folders) into a new folder under EFI/<new folder name>. Here I called it "mac". The `fedora` and `Microsoft` folders are there from the Fedora Linux and Windows 10 installs, respectively.
+Copy the usb contents (BOOT and OC folders) into a new folder under EFI/\<new folder name\>. Here I called it "mac". The `fedora` and `Microsoft` folders are there from the Fedora Linux and Windows 10 installs, respectively.
 
 ### Modify Grub to Chainload into OpenCore
 
@@ -207,7 +207,7 @@ menuentry 'Mac OS 12.6.2 (Monterey)` $menuentry_id_option 'macOS-efi' {
 
 > NOTE: might take some trial and error to find what hd2,gpt2 should be on your system. This value should be the partition that the EFI folder is in (it is in sda2 for mine). Grub console tab completion might help discover this value.
 
-> NOTE: where it says "mac", replace with what you put under EFI/<new folder name>.
+> NOTE: where it says "mac", replace with what you put under EFI/\<new folder name\>.
 
 Don't forget to rebuild grub config once the changes are done.
 
