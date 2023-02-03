@@ -243,7 +243,7 @@ Also use "2" for the `AudioOutMask`.
 
 ### Add SD Card Reader Support
 
-Using (0xFireWolf/RealtekCardReader)[https://github.com/0xFireWolf/RealtekCardReader]. Seems to work just fine.
+Using [0xFireWolf/RealtekCardReader](https://github.com/0xFireWolf/RealtekCardReader). Seems to work just fine.
 
 ## References and Links
 
