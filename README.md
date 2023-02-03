@@ -189,7 +189,7 @@ Copy the usb contents (BOOT and OC folders) into a new folder under EFI/\<new fo
 
 Sometimes people prefer to have OpenCore load Grub or be the only bootloader. I wanted to keep Grub.
 
-I booted into Fedora and added a new entry based on (this guide)[https://github.com/SayantanRC/URLs/blob/master/grub_to_opencore.md].
+I booted into Fedora and added a new entry based on [this guide](https://github.com/SayantanRC/URLs/blob/master/grub_to_opencore.md).
 
 Open `/etc/grub.d/40_custom` and add a new entry:
 
