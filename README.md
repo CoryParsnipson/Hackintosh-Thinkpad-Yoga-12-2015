@@ -199,13 +199,13 @@ menuentry 'Mac OS 12.6.2 (Monterey)' $menuentry_id_option 'macOS-efi' {
   insmod chain
   insmod part_gpt
   insmod fat
-  set root = (hd2,gpt2)
+  search --no-floppy --fs--uuid --set <EFI partition UUID>
   chainloader /efi/mac/OS/OpenCore.efi
-  set root = (hd2,gpt2)/efi/mac
+  set root = /efi/mac
 }
 ```
 
-> NOTE: might take some trial and error to find what hd2,gpt2 should be on your system. This value should be the partition that the EFI folder is in (it is in sda2 for mine). Grub console tab completion might help discover this value.
+> NOTE: where it says "<EFI partition UUID>" put the partition UUID of the efi partition. This can be found in linux with `lsblk -f` or looking at fstab. Reading partition info using fdisk does not seem to give the correct number. This is better than the previously suggested method of manually setting root according to the hd(X, gptY) scheme, which failed if you plugged in an external harddrive or bootable USB, because the gpt numbering changed.
 
 > NOTE: where it says "mac", replace with what you put under EFI/\<new folder name\>.
 
